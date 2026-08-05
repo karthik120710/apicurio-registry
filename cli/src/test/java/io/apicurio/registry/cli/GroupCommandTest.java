@@ -113,11 +113,11 @@ public class GroupCommandTest extends AbstractCLITest {
     @Test
     public void testGroupGetCommandFails() {
         // Unknown output type
-        executeAndAssertFailure("group", "create", "--output-type", "foo");
+        executeAndAssertFailure("group", "--output-type", "foo");
         // Page must be greater than 0
-        executeAndAssertFailure("group", "create", "-p", "-1");
+        executeAndAssertFailure("group", "-p", "-1");
         // Size must be greater than 0
-        executeAndAssertFailure("group", "create", "-s", "0");
+        executeAndAssertFailure("group", "-s", "0");
     }
 
     @Test
